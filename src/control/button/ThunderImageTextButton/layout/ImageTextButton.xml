@@ -1,0 +1,127 @@
+<xlue>	
+	<control class="Thunder.ImageTextButton">
+		<attr_def>
+			<attr name="BkgTextureID_Normal" type="string"><default>button.normal.bkg</default></attr>
+			<attr name="BkgTextureID_Hover" type="string"><default>button.hover.bkg</default></attr>
+			<attr name="BkgTextureID_Down" type="string"><default>button.down.bkg</default></attr>
+			<attr name="BkgTextureID_Disable" type="string"><default>button.normal.bkg</default></attr>
+
+			<attr name="IconBitmapID" type="string"><default></default></attr>
+			<attr name="IconBitmapID_Hover" type="string"><default></default></attr>
+			<attr name="IconBitmapID_Down" type="string"><default></default></attr>
+			<attr name="IconBitmapID_Disable" type="string"><default></default></attr>
+			<attr name="Text" type="string"><default></default></attr>
+			<attr name="Status" type="int"><default>1</default></attr>
+			<attr name="IconLeftPos" type="string"><default>0</default></attr>
+			<attr name="IconTopPos" type="string"><default>0</default></attr>
+			<attr name="TextLeftPos" type="int"><default>0</default></attr>
+			<attr name="TextTopPos" type="int"><default>0</default></attr>
+
+			<attr name="IconWidth" type="string"><default>30</default></attr>
+			<attr name="IconHeight" type="string"><default>30</default></attr>
+
+			<attr name="TextFontID" type="string"><default>default.font</default></attr>
+			<attr name="TextColorID" type="string"><default>system.black</default></attr>
+			<attr name="DisableTextColor" type="string" ><default>system.gray</default></attr>
+			<!--		是否拼接字体和颜色ID		true的话会根据状态在后面 加上响应的后缀.  如.normal  .hover  .down-->
+			<attr name="SpliceTextInfoID" type="bool"><default>false</default></attr>
+			<attr name="EffectColorResID" type="string" />
+						<!--是否默认按钮-->
+			<attr name="IsDefaultButton" type="bool">
+				<default>false</default>
+			</attr>
+			<attr name="TipText" type="string"/>
+			<attr name="HAlign" type="string"><default>center</default></attr>
+			<attr name="VAlign" type="string"><default>center</default></attr>
+			<!--是否默认按钮-->
+			<attr name="IsDefaultButton" type="bool">
+				<default>false</default>
+			</attr>
+			<attr name="DefaultAnimTexture" type="string">
+				<default>texture.btn.default.ani</default>
+			</attr>
+			<attr name="DefaultBkgNormal" type="string">
+				<default>texture.btn.default.normal</default>
+			</attr>
+			<attr name="FrameTime" type="int">
+				<default>3000</default>
+			</attr>
+		</attr_def>
+		<method_def>
+			<SetText file="ImageTextButton.xml.lua" func="SetText" />
+			<SetBkgTexture file="ImageTextButton.xml.lua" func="SetBkgTexture" />
+			<SetNormalBkgTexture file="ImageTextButton.xml.lua" func="SetNormalBkgTexture" />
+			<SetHoverBkgTexture file="ImageTextButton.xml.lua" func="SetHoverBkgTexture" />
+			<SetDownBkgTexture file="ImageTextButton.xml.lua" func="SetDownBkgTexture" />
+			<SetDisableBkgTexture file="ImageTextButton.xml.lua" func="SetDisableBkgTexture" />
+			<SetIconImage file="ImageTextButton.xml.lua" func="SetIconImage" />
+			<SetTextFontID file="ImageTextButton.xml.lua" func="SetTextFontID" />
+			<SetTextColorID file="ImageTextButton.xml.lua" func="SetTextColorID" />
+			<SetIconPos file="ImageTextButton.xml.lua" func="SetIconPos" />
+			<SetTextPos file="ImageTextButton.xml.lua" func="SetTextPos" />
+			<GetTextExtent file="ImageTextButton.xml.lua" func="GetTextExtent" />
+			<GetText file="ImageTextButton.xml.lua" func="GetText" />
+			<SetValign file="ImageTextButton.xml.lua" func="SetValign" />
+			<AddTipText file="ImageTextButton.xml.lua" func="AddTipText" />
+            <GetTipText file="ImageTextButton.xml.lua" func="GetTipText" />
+			<SetDefaultButton file="ImageTextButton.xml.lua" func="SetDefaultButton" />
+		</method_def>
+		<event_def>
+			<OnButtonClick />
+		</event_def>
+		<objtemplate>
+			<children>
+				<obj id="button.bkg" class="TextureObject">
+					<attr>
+						<left>0</left>
+						<top>0</top>
+						<width>father.width</width>
+						<height>father.height</height>
+					</attr>
+					<children>
+						<obj id="button.icon" class="ImageObject">
+							<attr>
+								<left>0</left>
+								<top>0</top>
+								<width>30</width>
+								<height>30</height>
+							</attr>
+						</obj>
+						<obj id="button.text" class="TextObject">
+							<attr>
+								<left>0</left>
+								<top>0</top>
+								<width>father.width</width>
+								<height>father.height</height>
+								<halign>center</halign>
+								<zorder>10</zorder>
+								<font>default.font</font>
+							</attr>
+						</obj>
+					</children>
+				</obj>
+				<obj id="button.oldbkg" class="TextureObject">
+					<attr>
+						<left>0</left>
+						<top>0</top>
+						<width>father.width</width>
+						<height>father.height</height>
+					</attr>
+				</obj>
+			</children>
+			<eventlist>
+				<event name="OnBind" file="ImageTextButton.xml.lua" func="OnBind" />
+				<event name="OnPosChange" file="ImageTextButton.xml.lua" func="OnPosChange" />
+				<event name="OnLButtonDown" file="ImageTextButton.xml.lua" func="OnLButtonDown" />
+				<event name="OnLButtonUp" file="ImageTextButton.xml.lua" func="OnLButtonUp" />
+				<event name="OnMouseMove" file="ImageTextButton.xml.lua" func="OnMouseMove" />
+				<event name="OnMouseLeave" file="ImageTextButton.xml.lua" func="OnMouseLeave" />
+				<event name="OnInitControl" file="ImageTextButton.xml.lua" func="OnInitControl" />
+				<event name="OnMouseHover" file="ImageTextButton.xml.lua" func="OnMouseHover" />
+				
+				<event name="OnEnableChange" file="ImageTextButton.xml.lua" func="OnEnableChange" />
+				<event name="OnVisibleChange" file="ImageTextButton.xml.lua" func="OnVisibleChange" />
+			</eventlist>
+		</objtemplate>
+	</control>
+</xlue>	

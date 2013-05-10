@@ -1,0 +1,5 @@
+﻿<XLUE>
+	<resource>			
+		<texture id="bitmap.bkg" type="NineInOne" image="mainwnd\bkg.png"/>
+	</resource>
+</XLUE>

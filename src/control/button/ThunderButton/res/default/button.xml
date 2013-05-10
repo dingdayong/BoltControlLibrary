@@ -1,0 +1,11 @@
+<xlue>
+<resource>
+	<imagelist id="imagelist.general.button.bkg" vertical="0" splitter="1" varyblock="1" image="button\general.button.bkg.png"/>
+	<texture id="general.button.normal" type="NineInOne" imagelist="imagelist.general.button.bkg" index="1"/>
+	<texture id="general.button.hover" type="NineInOne" imagelist="imagelist.general.button.bkg" index="2"/>
+	<texture id="general.button.down" type="NineInOne" imagelist="imagelist.general.button.bkg" index="3"/>
+	<texture id="general.button.disable" type="NineInOne" imagelist="imagelist.general.button.bkg" index="4"/>
+	
+	<font id="button.default.font" height="12" facename="defaultfont"/>
+</resource>
+</xlue>

@@ -1,0 +1,9 @@
+﻿<XLUE>
+	<resource>			
+			<imagelist id="imagelist.button.bkg" vertical="0" splitter="0" varyblock="0" blocksize="84" image="bitmap\imagelist.general.btn.png"/>
+		<texture id="button.normal.newbkg" type="NineInOne" imagelist="imagelist.button.bkg" index="1" /> 	
+		<texture id="button.hover.newbkg" type="NineInOne" imagelist="imagelist.button.bkg" index="2" /> 	
+		<texture id="button.down.newbkg" type="NineInOne" imagelist="imagelist.button.bkg" index="3" /> 				
+		<texture id="button.disable.newbkg" type="NineInOne" imagelist="imagelist.button.bkg" index="4" /> 	
+	</resource>
+</XLUE>

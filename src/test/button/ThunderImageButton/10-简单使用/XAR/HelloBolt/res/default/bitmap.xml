@@ -1,0 +1,20 @@
+﻿<XLUE>
+	<resource>			
+
+		<imagelist id="imagelist.blv.login.ok.btn" image="bitmap\blv.login.ok.btn.png" blocksize="77"/>
+		<bitmap id="bitmap.login.ok.normal" imagelist="imagelist.blv.login.ok.btn" index="1"/>
+		<bitmap id="bitmap.login.ok.hover" imagelist="imagelist.blv.login.ok.btn" index="2"/>
+		<bitmap id="bitmap.login.ok.down" imagelist="imagelist.blv.login.ok.btn" index="3"/>
+		<bitmap id="bitmap.login.ok.disable" imagelist="imagelist.blv.login.ok.btn" index="4"/>
+		
+		<bitmap id="bitmap.startcheck.normal" image="bitmap\home_tijian0.png"/>
+		<bitmap id="bitmap.startcheck.hover" image="bitmap\home_tijian1.png"/>
+		<bitmap id="bitmap.startcheck.down" image="bitmap\home_tijian2.png"/>
+		<bitmap id="bitmap.startcheck.disable" image="bitmap\home_tijian0.png"/>
+		
+		<bitmap id="bitmap.leakrepair.normal" image="bitmap\leak_repair1.png"/>
+		<bitmap id="bitmap.leakrepair.hover" image="bitmap\leak_repair2.png"/>
+		<bitmap id="bitmap.leakrepair.down" image="bitmap\leak_repair3.png"/>
+		<bitmap id="bitmap.leakrepair.disable" image="bitmap\leak_repair1.png"/>		
+	</resource>
+</XLUE>

@@ -1,0 +1,153 @@
+<xlue>
+  <control class="Thunder.Form">
+    <attr_def>
+      <attr name="bkg" type="string">
+        <default>bitmap.bkg</default>
+      </attr>
+      <attr name="captionheight" type="int">
+        <default>30</default>
+      </attr>
+      <attr name="captioncolor" type="string">
+      </attr>      
+      <attr name="Caption" type="string">
+        <default>我的窗口</default>
+      </attr>
+    </attr_def>
+    <method_def>
+      <SetText file="Form.xml.lua" func="SetCaption" />
+      <GetText file="Form.xml.lua" func="GetCaption" />
+    </method_def>
+    <event_def>
+    </event_def>
+    <objtemplate>
+      <children>
+        <obj id="mainwnd.bkg" class="TextureObject">
+          <attr>
+            <width>father.width</width>
+            <height>father.height</height>
+          </attr>
+          <children>
+            <obj id="mainwnd.resize.right" class="ResizeObject">
+              <attr>
+                <left>father.width-4</left>
+                <width>4</width>
+                <height>father.height</height>
+                <type>right</type>
+                <zorder>10000</zorder>
+              </attr>
+            </obj>
+
+            <obj id="mainwnd.resize.bottom" class="ResizeObject">
+              <attr>
+                <top>father.height-4</top>
+                <width>father.width</width>
+                <height>4</height>
+                <type>bottom</type>
+                <zorder>10000</zorder>
+              </attr>
+            </obj>
+
+            <obj id="mainwnd.resize.top" class="ResizeObject">
+              <attr>
+                <top>-2</top>
+                <width>father.width</width>
+                <height>4</height>
+                <type>top</type>
+                <zorder>10000</zorder>
+              </attr>
+            </obj>
+
+            <obj id="mainwnd.resize.left" class="ResizeObject">
+              <attr>
+                <left>-2</left>
+                <width>4</width>
+                <height>father.height</height>
+                <type>left</type>
+                <zorder>10000</zorder>
+              </attr>
+            </obj>
+
+            <obj id="mainwnd.resize.topleft" class="ResizeObject">
+              <attr>
+                <left>-2</left>
+                <top>-2</top>
+                <width>6</width>
+                <height>6</height>
+                <type>topleft</type>
+                <zorder>1000000</zorder>
+              </attr>
+            </obj>
+
+            <obj id="mainwnd.resize.bottomleft" class="ResizeObject">
+              <attr>
+                <left>-2</left>
+                <top>father.height-4</top>
+                <width>6</width>
+                <height>6</height>
+                <type>bottomleft</type>
+                <zorder>1000000</zorder>
+              </attr>
+            </obj>
+
+            <obj id="mainwnd.resize.topright" class="ResizeObject">
+              <attr>
+                <left>father.width-4</left>
+                <top>-2</top>
+                <width>6</width>
+                <height>6</height>
+                <type>topright</type>
+                <zorder>1000000</zorder>
+              </attr>
+            </obj>
+
+            <obj id="mainwnd.resize.bottomright" class="ResizeObject">
+              <attr>
+                <left>father.width-10</left>
+                <top>father.height-10</top>
+                <width>12</width>
+                <height>12</height>
+                <type>bottomright</type>
+                <zorder>1000000</zorder>
+              </attr>
+            </obj>
+
+            <obj id="mainwnd.header" class="LayoutObject">
+              <attr>
+                <width>father.width</width>
+                <height>30</height>
+              </attr>
+              <children>
+                <obj id="mainwnd.caption" class="CaptionObject">
+                  <attr>
+                    <left>0</left>
+                    <top>0</top>
+                    <width>father.width</width>
+                    <height>father.height</height>
+                    <zorder>0</zorder>
+                  </attr>
+                  <children>
+                    <obj id="mainwnd.title" class="TextObject">
+                      <attr>
+                        <left>father.width/2-86/2</left>
+                        <top>2</top>
+                        <width>86</width>
+                        <height>father.height</height>
+                        <valign>center</valign>
+                        <font>default.font</font>
+                      </attr>
+                    </obj>
+                  </children>
+                </obj>
+              </children>
+            </obj>
+          </children>
+        </obj>
+      </children>
+      <eventlist>
+        <event name="OnInitControl" file="Form.xml.lua" func="OnInitControl"/>
+        <event name="OnUpdateStyle" file="Form.xml.lua" func="OnUpdateStyle"/>
+      </eventlist>
+    </objtemplate>
+  </control>
+
+</xlue>

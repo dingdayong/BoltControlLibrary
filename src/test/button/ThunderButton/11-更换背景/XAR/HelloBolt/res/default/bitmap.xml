@@ -1,0 +1,8 @@
+﻿<XLUE>
+	<resource>			
+		<texture id="button.normal.bkg" type="NineInOne" image="bitmap\btn_normal.png" /> 	
+		<texture id="button.hover.bkg" type="NineInOne" image="bitmap\btn_hover.png" /> 	
+		<texture id="button.down.bkg" type="NineInOne" image="bitmap\btn_down.png" /> 		
+		<texture id="button.disable.bkg" type="NineInOne" image="bitmap\btn_dsiable.png" /> 		
+	</resource>
+</XLUE>
