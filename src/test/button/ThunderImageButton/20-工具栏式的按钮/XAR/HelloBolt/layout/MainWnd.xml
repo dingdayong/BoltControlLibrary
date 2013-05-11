@@ -31,30 +31,54 @@
 						</attr>	
 						<children>			
 							
-					<obj id="BtnImageText" class="Thunder.ImageTextButton">
-								<attr>
-									<left>100</left>
-									<top>100</top>
-									<width>100</width>
-									<height>80</height>
-									<Text>图标按钮</Text>
-									<taborder>4</taborder>
-								</attr>
-							</obj>
-
-							<obj id="BtnImageText" class="Thunder.ImageTextButton">
-								<attr>
-									<left>300</left>
-									<top>100</top>
-									<width>100</width>
-									<height>36</height>
-									<Text>退出</Text>
-									<taborder>4</taborder>
-								</attr>
-								<eventlist>
-									<event name="OnLButtonDown" file="MainWnd.xml.lua" func="OnClose" />
-								</eventlist>										
-							</obj>
+						<obj id="reload" class="Thunder.ImageButton">
+									<attr>
+										<left>100</left>
+										<top>100</top>
+										<width>17</width>
+										<height>17</height>
+										<halign>center</halign>
+										<NormalBkg>bitmap.reload.normal</NormalBkg>
+										<HoverBkg>bitmap.reload.hover</HoverBkg>
+										<DownBkg>bitmap.reload.down</DownBkg>
+										<TipText>tiptiptiptiptip</TipText>
+									</attr>
+									<eventlist>
+								
+									</eventlist>
+								</obj>
+								
+							<obj id="startcheck" class="Thunder.ImageButton">
+									<attr>
+										<left>100</left>
+										<top>118</top>
+										<width>17</width>
+										<height>17</height>
+										<halign>center</halign>
+										<NormalBkg>bitmap.stop.normal</NormalBkg>
+										<HoverBkg>bitmap.stop.hover</HoverBkg>
+										<DownBkg>bitmap.stop.down</DownBkg>
+									</attr>
+									<eventlist>
+					
+									</eventlist>
+								</obj>
+								
+							<obj id="leakrepair" class="Thunder.ImageButton">
+									<attr>
+										<left>100</left>
+										<top>138</top>
+										<width>17</width>
+										<height>17</height>
+										<halign>center</halign>
+										<NormalBkg>bitmap.add.normal</NormalBkg>
+										<HoverBkg>bitmap.add.hover</HoverBkg>
+										<DownBkg>bitmap.add.down</DownBkg>
+									</attr>
+									<eventlist>
+										<event name="OnLButtonDown" file="MainWnd.xml.lua" func="OnClose" />
+									</eventlist>
+								</obj>																
 																											
 						</children>							
 					</obj>					

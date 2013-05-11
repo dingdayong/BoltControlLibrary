@@ -4,16 +4,18 @@
 		   <attr name="NormalBkg" type="string" />
 		   <attr name="HoverBkg" type="string" />
 		   <attr name="DownBkg" type="string" />
+		   <attr name="TipText" type="string"/>
 		</attr_def>
 		<method_def>
-		    
+		   <AddTipText file="ImageButton.xml.lua" func="AddTipText" />
+       <GetTipText file="ImageButton.xml.lua" func="GetTipText" />
 		</method_def>
 		<event_def> 
 			<OnClick />
 		</event_def>
 		<objtemplate>
 			<children>
-				<obj id="bkg" class="ImageObject">
+				<obj id="button.bkg" class="ImageObject">
 					<attr>
 						<width>father.width</width>
 						<height>father.height</height>
@@ -28,6 +30,8 @@
 				<event name="OnMouseEnter" file="ImageButton.xml.lua" func="OnMouseEnter" />
 				<event name="OnMouseLeave" file="ImageButton.xml.lua" func="OnMouseLeave" />
 				<event name="OnInitControl" file="ImageButton.xml.lua" func="OnInitControl" />
+				<event name="OnPosChange" file="ImageButton.xml.lua" func="OnPosChange" />
+				<event name="OnMouseHover" file="ImageButton.xml.lua" func="OnMouseHover" />
 			</eventlist>
 		</objtemplate>
 	</control>

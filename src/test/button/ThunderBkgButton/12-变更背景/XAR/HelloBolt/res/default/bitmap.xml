@@ -1,0 +1,16 @@
+﻿<XLUE>
+	<resource>			
+		<imagelist id="imagelist.toolbar.bkg" vertical="0" splitter="1" varyblock="1" image="bitmap\panel.tab.bkg.png"/>
+		<texture id="texture.toolbar.left.hover" type="ThreeInOneH" imagelist="imagelist.toolbar.bkg" index="8"/>
+		<texture id="texture.toolbar.left.down" type="ThreeInOneH" imagelist="imagelist.toolbar.bkg" index="7"/>
+		<texture id="texture.toolbar.right.hover" type="ThreeInOneH" imagelist="imagelist.toolbar.bkg" index="12"/>
+		<texture id="texture.toolbar.right.down" type="ThreeInOneH" imagelist="imagelist.toolbar.bkg" index="11"/>
+		
+		<texture id="bkgbutton.hover" type="Tile" image="bitmap\button.hover.png" />
+		<texture id="bkgbutton.down" type="Tile" image="bitmap\button.down.png" />		
+
+		<imagelist id="imagelist.toolbar" vertical="0" splitter="1" varyblock="1" image="bitmap\backforward.png"/>
+		<bitmap id="imagelist.toolbar.back" imagelist="imagelist.toolbar" index="1" />
+		<bitmap id="imagelist.toolbar.forward" imagelist="imagelist.toolbar" index="2" />
+	</resource>
+</XLUE>

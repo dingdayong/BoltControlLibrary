@@ -1,0 +1,48 @@
+<xlue>
+	<control class="Thunder.BkgButton">
+	    <attr_def>
+		   <attr name="NormalBkg" type="string" ></attr>
+		   <attr name="HoverBkg" type="string"><default>general.bkgbutton.hover</default></attr>
+		   <attr name="DownBkg" type="string"><default>general.bkgbutton.down</default></attr>
+		   <attr name="Image" type="string" />
+		   <attr name="ImageHover" type="string" />
+		   <attr name="ImageDown" type="string" />
+		</attr_def>
+		<method_def>
+		    
+		</method_def>
+		<event_def> 
+			<OnClick />
+		</event_def>
+		<objtemplate>
+			<children>
+				<obj id="button.bkg" class="TextureObject">
+					<attr>
+						<width>father.width</width>
+						<height>father.height</height>
+						<valign>center</valign>
+						<halign>center</halign>
+					</attr>
+					
+						<children>
+							<obj id="button.img" class="ImageObject">
+								<attr>
+									<width>father.width</width>
+									<height>father.height</height>
+									<halign>center</halign>
+									<valign>center</valign>
+								</attr>
+							</obj>							
+						</children>					
+				</obj>
+			</children>
+			<eventlist>
+				<event name="OnLButtonDown" file="BkgButton.xml.lua" func="OnLButtonDown" />
+				<event name="OnLButtonUp" file="BkgButton.xml.lua" func="OnLButtonUp" />
+				<event name="OnMouseEnter" file="BkgButton.xml.lua" func="OnMouseEnter" />
+				<event name="OnMouseLeave" file="BkgButton.xml.lua" func="OnMouseLeave" />
+				<event name="OnInitControl" file="BkgButton.xml.lua" func="OnInitControl" />
+			</eventlist>
+		</objtemplate>
+	</control>
+</xlue>

@@ -26,10 +26,7 @@
 			<!--		是否拼接字体和颜色ID		true的话会根据状态在后面 加上响应的后缀.  如.normal  .hover  .down-->
 			<attr name="SpliceTextInfoID" type="bool"><default>false</default></attr>
 			<attr name="EffectColorResID" type="string" />
-						<!--是否默认按钮-->
-			<attr name="IsDefaultButton" type="bool">
-				<default>false</default>
-			</attr>
+
 			<attr name="TipText" type="string"/>
 			<attr name="HAlign" type="string"><default>center</default></attr>
 			<attr name="VAlign" type="string"><default>center</default></attr>

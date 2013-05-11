@@ -1,0 +1,6 @@
+﻿<XLUE>
+	<resource>			
+		<texture id="general.bkgbutton.hover" type="Tile" image="bkgbutton\btn.hover.png" />
+		<texture id="general.bkgbutton.down" type="Tile" image="bkgbutton\btn.down.png" />
+	</resource>
+</XLUE>

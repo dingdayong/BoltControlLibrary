@@ -29,34 +29,33 @@
 							<width>father.width</width>
 							<height>father.height-30</height>
 						</attr>	
-						<children>			
-							
-					<obj id="BtnImageText" class="Thunder.ImageTextButton">
+						<children>	
+							<obj id="back" class="Thunder.BkgButton">
 								<attr>
 									<left>100</left>
-									<top>100</top>
-									<width>100</width>
-									<height>80</height>
-									<Text>图标按钮</Text>
-									<taborder>4</taborder>
+									<top>90</top>
+									<width>40</width>
+									<height>40</height>									
+									<Image>imagelist.toolbar.back</Image>
+								</attr>
+							</obj>
+	
+								<obj id="back" class="Thunder.BkgButton">
+								<attr>
+									<left>130</left>
+									<top>90</top>
+									<width>40</width>
+									<height>40</height>
+									<Image>imagelist.toolbar.forward</Image>
 								</attr>
 							</obj>
 
-							<obj id="BtnImageText" class="Thunder.ImageTextButton">
-								<attr>
-									<left>300</left>
-									<top>100</top>
-									<width>100</width>
-									<height>36</height>
-									<Text>退出</Text>
-									<taborder>4</taborder>
-								</attr>
-								<eventlist>
-									<event name="OnLButtonDown" file="MainWnd.xml.lua" func="OnClose" />
-								</eventlist>										
-							</obj>
 																											
-						</children>							
+						</children>		
+						
+						<eventlist>
+							<event name="OnLButtonDbClick" file="MainWnd.xml.lua" func="OnClose" />
+						</eventlist>											
 					</obj>					
 				</children>										
 			</obj>

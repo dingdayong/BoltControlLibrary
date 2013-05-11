@@ -48,17 +48,51 @@
 
 							<obj id="BtnImageText" class="Thunder.ImageTextButton">
 								<attr>
-									<left>300</left>
+									<left>250</left>
+									<top>100</top>
+									<width>100</width>
+									<height>100</height>
+									<Text>退出</Text>
+									<taborder>5</taborder>
+									<BkgTextureID_Normal>button.normal.bkg1</BkgTextureID_Normal>
+									<BkgTextureID_Hover>button.hover.bkg1</BkgTextureID_Hover>
+									<BkgTextureID_Down>button.down.bkg1</BkgTextureID_Down>
+									<BkgTextureID_Disable>button.disable.bkg1</BkgTextureID_Disable>									
+								</attr>							
+							</obj>
+							
+							<obj id="BtnImageText" class="Thunder.ImageTextButton">
+								<attr>
+									<left>400</left>
 									<top>100</top>
 									<width>100</width>
 									<height>36</height>
-									<Text>图标按钮</Text>
-									<taborder>4</taborder>
+									<Text>退出</Text>
+									<taborder>5</taborder>
+									<BkgTextureID_Normal>button.normal.bkg1</BkgTextureID_Normal>
+									<BkgTextureID_Hover>button.hover.bkg1</BkgTextureID_Hover>
+									<BkgTextureID_Down>button.down.bkg1</BkgTextureID_Down>
+									<BkgTextureID_Disable>button.disable.bkg1</BkgTextureID_Disable>									
+								</attr>							
+							</obj>							
+							
+							<obj id="BtnImageText" class="Thunder.ImageTextButton">
+								<attr>
+									<left>600</left>
+									<top>100</top>
+									<width>100</width>
+									<height>36</height>
+									<Text>退出</Text>
+									<taborder>5</taborder>
+									<BkgTextureID_Normal>button.normal.newbkg</BkgTextureID_Normal>
+									<BkgTextureID_Hover>button.hover.newbkg</BkgTextureID_Hover>
+									<BkgTextureID_Down>button.down.newbkg</BkgTextureID_Down>
+									<BkgTextureID_Disable>button.disable.newbkg</BkgTextureID_Disable>									
 								</attr>
 								<eventlist>
 									<event name="OnLButtonDown" file="MainWnd.xml.lua" func="OnClose" />
 								</eventlist>										
-							</obj>
+							</obj>							
 																											
 						</children>							
 					</obj>					

@@ -29,34 +29,64 @@
 							<width>father.width</width>
 							<height>father.height-30</height>
 						</attr>	
-						<children>			
-							
-					<obj id="BtnImageText" class="Thunder.ImageTextButton">
+						<children>	
+							<obj id="back" class="Thunder.BkgButton">
 								<attr>
 									<left>100</left>
-									<top>100</top>
-									<width>100</width>
-									<height>80</height>
-									<Text>图标按钮</Text>
-									<taborder>4</taborder>
+									<top>90</top>
+									<width>23</width>
+									<height>23</height>
+									<halign>center</halign>
+									<HoverBkg>bkgbutton.hover</HoverBkg>
+									<DownBkg>bkgbutton.down</DownBkg>
+									<Image>imagelist.toolbar.back</Image>
 								</attr>
 							</obj>
-
-							<obj id="BtnImageText" class="Thunder.ImageTextButton">
+	
+								<obj id="back" class="Thunder.BkgButton">
 								<attr>
-									<left>300</left>
-									<top>100</top>
-									<width>100</width>
-									<height>36</height>
-									<Text>退出</Text>
-									<taborder>4</taborder>
+									<left>124</left>
+									<top>90</top>
+									<width>23</width>
+									<height>23</height>
+									<halign>center</halign>
+									<HoverBkg>bkgbutton.hover</HoverBkg>
+									<DownBkg>bkgbutton.down</DownBkg>
+									<Image>imagelist.toolbar.forward</Image>
 								</attr>
-								<eventlist>
-									<event name="OnLButtonDown" file="MainWnd.xml.lua" func="OnClose" />
-								</eventlist>										
 							</obj>
+							
+							
+							<obj id="back1" class="Thunder.BkgButton">
+								<attr>
+									<left>100</left>
+									<top>150</top>
+									<width>40</width>
+									<height>40</height>
+									<HoverBkg>bkgbutton.hover</HoverBkg>
+									<DownBkg>bkgbutton.down</DownBkg>
+									<Image>imagelist.toolbar.back</Image>
+								</attr>
+							</obj>
+	
+								<obj id="back1" class="Thunder.BkgButton">
+								<attr>
+									<left>150</left>
+									<top>150</top>
+									<width>40</width>
+									<height>40</height>
+									<HoverBkg>bkgbutton.hover</HoverBkg>
+									<DownBkg>bkgbutton.down</DownBkg>
+									<Image>imagelist.toolbar.forward</Image>
+								</attr>
+							</obj>							
+
 																											
-						</children>							
+						</children>		
+						
+						<eventlist>
+							<event name="OnLButtonDbClick" file="MainWnd.xml.lua" func="OnClose" />
+						</eventlist>											
 					</obj>					
 				</children>										
 			</obj>

@@ -1,0 +1,18 @@
+﻿<XLUE>
+	<resource>			
+		
+		<imagelist id="bitmap.address.imagelist" vertical="0" splitter="1" varyblock="0" blocksize="13" image="bitmap\reload_stop_go.png"/>
+		<bitmap id="bitmap.reload.normal" imagelist="bitmap.address.imagelist" index="1"/>
+		<bitmap id="bitmap.reload.hover" imagelist="bitmap.address.imagelist" index="2"/>
+		<bitmap id="bitmap.reload.down" imagelist="bitmap.address.imagelist" index="3"/>
+		
+		<bitmap id="bitmap.stop.normal" imagelist="bitmap.address.imagelist" index="4"/>
+		<bitmap id="bitmap.stop.hover" imagelist="bitmap.address.imagelist" index="5"/>
+		<bitmap id="bitmap.stop.down" imagelist="bitmap.address.imagelist" index="6"/>
+		
+		<imagelist id="imagelist.addbutton" vertical="0" splitter="0" varyblock="0" blocksize="23" image="bitmap\paneAddButtons.png"/>
+		<bitmap id="bitmap.add.normal" imagelist="imagelist.addbutton" index="1" />
+		<bitmap id="bitmap.add.hover" imagelist="imagelist.addbutton" index="2" />
+		<bitmap id="bitmap.add.down" imagelist="imagelist.addbutton" index="3" />		
+	</resource>
+</XLUE>

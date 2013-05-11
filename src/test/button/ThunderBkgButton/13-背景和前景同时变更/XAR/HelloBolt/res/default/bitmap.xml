@@ -1,0 +1,14 @@
+﻿<XLUE>
+	<resource>			
+		<texture id="bkgbutton.hover" type="Tile" image="bitmap\button.hover.png" />
+		<texture id="bkgbutton.down" type="Tile" image="bitmap\button.down.png" />		
+
+		<imagelist id="imagelist.toolbar" vertical="0" splitter="1" varyblock="1" image="bitmap\backforward.png"/>
+		<bitmap id="imagelist.toolbar.back" imagelist="imagelist.toolbar" index="1" />
+		<bitmap id="imagelist.toolbar.forward" imagelist="imagelist.toolbar" index="2" />
+		
+		<imagelist id="imagelist.toolbar.down" vertical="0" splitter="1" varyblock="1" image="bitmap\backforward.down.png"/>
+		<bitmap id="imagelist.toolbar.back.down" imagelist="imagelist.toolbar.down" index="1" />
+		<bitmap id="imagelist.toolbar.forward.down" imagelist="imagelist.toolbar.down" index="2" />
+	</resource>
+</XLUE>

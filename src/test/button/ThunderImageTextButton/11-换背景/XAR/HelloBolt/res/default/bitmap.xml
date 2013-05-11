@@ -5,5 +5,9 @@
 		<texture id="button.hover.newbkg" type="NineInOne" imagelist="imagelist.button.bkg" index="2" /> 	
 		<texture id="button.down.newbkg" type="NineInOne" imagelist="imagelist.button.bkg" index="3" /> 				
 		<texture id="button.disable.newbkg" type="NineInOne" imagelist="imagelist.button.bkg" index="4" /> 	
+		
+		<texture id="button.normal.bkg1" type="NineInOne" image="bitmap\btn_bkg.normal.png" /> 	
+		<texture id="button.hover.bkg1" type="NineInOne" image="bitmap\btn_bkg.hover.png" /> 	
+		<texture id="button.down.bkg1" type="NineInOne" image="bitmap\btn_bkg.down.png" /> 
 	</resource>
 </XLUE>
