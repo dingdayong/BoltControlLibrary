@@ -1,0 +1,58 @@
+<xlue>
+	<control class="Thunder.Edit">
+	    <attr_def>
+            <attr name="NormalBkg" type="string">
+                <default>texture.edit.bkg.normal</default>
+            </attr>
+            <attr name="HoverBkg" type="string" >
+                <default>texture.edit.bkg.hover</default>
+            </attr>
+            <attr name="DisableBkg" type="string">
+                <default>texture.edit.bkg.disable</default>
+            </attr>	  
+            <attr name="value" type="string"></attr>	                
+		</attr_def>
+		<method_def>
+		    <SetText file="Edit.xml.lua" func="SetText" />
+				<GetText file="Edit.xml.lua" func="GetText" />
+		</method_def>
+		<event_def> 
+		</event_def>
+		<objtemplate>
+			<children>
+				<obj id="edit.border" class="TextureObject">
+					<attr>
+						<width>father.width</width>
+						<height>father.height</height>
+						<texture>texture.edit.bkg.normal</texture>
+					</attr>
+					<children>
+						<obj id="edit.content" class="EditObject">
+							<attr>
+								<left>9</left>
+								<top>5</top>
+								<width>father.width-23-16</width>
+								<height>16</height>
+								<valign>center</valign>
+								<autourldetect>0</autourldetect>
+							</attr>
+							<eventlist>
+	          		
+							</eventlist>									
+						</obj>
+					</children>					
+					<eventlist>      					
+					</eventlist>					
+				</obj>
+				
+			</children>
+			<eventlist>
+				<event name="OnInitControl" file="Edit.xml.lua" func="OnInitControl"/>
+				<event name="OnControlMouseEnter" file="Edit.xml.lua" func="OnMouseEnter" />		
+				<event name="OnControlMouseLeave" file="Edit.xml.lua" func="OnMouseLeave" />
+				<event name="OnControlFocusChange" file="Edit.xml.lua" func="OnFocusChange" />		
+            					
+			</eventlist>	
+		</objtemplate>
+	</control>
+</xlue>

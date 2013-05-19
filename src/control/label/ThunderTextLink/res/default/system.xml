@@ -1,0 +1,32 @@
+<xlue>
+<resource>
+	<color id="color.linktext" value="#167bca"/>
+	<color id="color.thunder.text.link" value="#0084ff" alpha="255" />
+	<color id="color.thunder.text.normal" value="#000000" alpha="255" />
+	<color id="system.white" red="255" green="255" blue="255" alpha="255" />
+	<color id="system.black" red="0" green="0" blue="0" alpha="255" />
+	<color id="system.orange" red="44" green="151" blue="241" alpha="255" />
+	<color id="system.blue" red="0" green="0" blue="255" alpha="255" />
+	<color id="system.green" red="38" green="139" blue="35" alpha="255"/>
+	<color id="system.red" red="255" green="0" blue="0" alpha="255" />
+	<color id="system.gray" red="204" green="211" blue="214" alpha="255"/>
+	<color id="system.yellow" red="255" green="255" blue="0" alpha="255"/>
+	<color id="system.title" value="#000000"/>
+	<color id="system.title.effect" value="#FFFFFFFF"/>
+	<color id="color.system.text.normal" value="#000000" alpha="255"/>
+	<color id="color.system.text.disable" value="#bac4cb" alpha="255" />
+	<color id="color.btTask.text" value="#636363" />
+	
+	
+	<pen id="pen.solid" width="1" penstyle="solid" />
+	<pen id="pen.dot" width="1" penstyle="dot" />
+	<brush id="brush.solid" brushstyle="solid" />
+	<brush id="brush.null" brushstyle="null" />
+
+	
+	<font id="default.font" height="12" facename="defaultfont" />
+	<font id="default.font.link" height="12" facename="defaultfont" />
+	<font id="default.font.underline" height="12" facename="defaultfont" underline="1"/>
+	<font id="default.font.edit" height="12" facename="defaultfont" />
+</resource>
+</xlue>

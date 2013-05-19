@@ -1,0 +1,137 @@
+<xlue>
+	<animationtemplate id="radiobutton.showani" class="PosChangeAnimation">
+		<attr>
+			<curve>radiobutton.show</curve>
+			<totaltime>300</totaltime>
+			<loop>false</loop>
+		</attr>
+	</animationtemplate>
+	
+
+	<!--
+		Status:  1:Normal,  2:Hover, 3:Push, 4:Disible
+	-->
+	<control class="Thunder.RadioButton">
+		<attr_def>
+			<attr name="BoxNormalIconID" type="string"><default>sub.wnd.radiobutton.box.normal</default></attr>
+			<attr name="DotNormalIconID" type="string"><default>sub.wnd.radiobutton.dot.normal</default></attr>
+			<attr name="DotDisableIconID" type="string"><default>sub.wnd.radiobutton.dot.disable</default></attr>
+			<attr name="BoxDisableIconID" type="string"><default>sub.wnd.radiobutton.box.disable</default></attr>
+			<attr name="BoxHoverIconID" type="string"><default>sub.wnd.radiobutton.box.hover</default></attr>
+			<attr name="Text" type="string"><default>""</default></attr>
+			<attr name="TextPos" type="int"><default>21</default></attr>
+			<attr name="Font" type="string"><default>default.font</default></attr>
+			<attr name="TextColor" type="string"><default>system.black</default></attr>
+			<attr name="DisableTextColor" type="string"><default>system.gray</default></attr>
+			<attr name="Select" type="bool"><default>false</default></attr>
+			<attr name="Status" type="int"><default>1</default></attr>
+			<attr name="Enable" type="bool"><default>true</default></attr>
+			<attr name="TabID" type="int"/>
+			<attr name="ShowFocusRect" type="bool" ><default>true</default></attr>
+		</attr_def>
+		<method_def>
+				<SetText file="RadioButton.xml.lua" func="RadioButton_SetText" />
+				<GetText file="RadioButton.xml.lua" func="RadioButton_GetText" />
+				<SetSelect file="RadioButton.xml.lua" func="RadioButton_SetSelect" />
+				<GetSelect file="RadioButton.xml.lua" func="RadioButton_GetSelect" />
+				<GetMinSize file="RadioButton.xml.lua" func="RadioButton_GetMinSize" />
+		</method_def>
+		<event_def>
+			<OnRadioButtonClick>
+			</OnRadioButtonClick>
+		</event_def>
+		<objtemplate>
+			<children>
+				<obj id="box" class="ImageObject">
+					<attr>
+						<left>0</left>
+						<top>(father.height - 19)/2</top>
+						<width>19</width>
+						<height>19</height>
+					</attr>
+					<children>
+						<obj id="dot" class="ImageObject">
+							<attr>
+								<left>0</left>
+								<top>0</top>
+								<width>19</width>
+								<height>19</height>
+								<drawmode>1</drawmode>
+							</attr>
+						</obj>
+					</children>
+				</obj>
+				<obj id="focusrectangle" class="RectangleObject">
+					<attr>
+						<width>father.width</width>
+						<height>father.height</height>
+						<srcpt>15,1</srcpt>
+						<destpt>width-1,height-1</destpt>
+						<pen>pen.dot</pen>
+						<pencolor>system.black</pencolor>
+						<brush>brush.null</brush>
+						<visible>false</visible>
+					</attr>
+				</obj>
+				<obj id="text" class="TextObject">
+					<attr>
+						<left>16</left>
+						<top>0</top>
+						<width>father.width-16</width>
+						<height>father.height</height>
+						<textcolor>system.black</textcolor>
+						<font>default.font</font>
+						<halign>left</halign>
+						<valign>center</valign>
+						<endellipsis>1</endellipsis>
+					</attr>
+				</obj>
+			</children>
+			<eventlist>
+				<event name="OnBind" file="RadioButton.xml.lua" func="RadioButton_OnBind" />
+				<event name="OnLButtonDown" file="RadioButton.xml.lua" func="RadioButton_OnLButtonDown" />
+				<event name="OnLButtonUp" file="RadioButton.xml.lua" func="RadioButton_OnLButtonUp" />
+				<event name="OnMouseMove" file="RadioButton.xml.lua" func="RadioButton_OnMouseMove" />
+				<event name="OnMouseLeave" file="RadioButton.xml.lua" func="RadioButton_OnMouseLeave" />
+				<event name="OnPosChange" file="RadioButton.xml.lua" func="RadioButton_OnPosChange" />
+				<event name="OnInitControl" file="RadioButton.xml.lua" func="OnInitControl" />
+				<event name="OnFocusChange" file="RadioButton.xml.lua" func="RadioButton_OnFocusChange" />
+				<event name="OnKeyUp" file="RadioButton.xml.lua" func="RadioButton_OnChar" />
+				
+				<event name="OnEnableChange" file="RadioButton.xml.lua" func="RadioButton_OnEnableChange" />
+				<event name="OnVisibleChange" file="RadioButton.xml.lua" func="RadioButton_OnVisibleChange" />
+			</eventlist>
+		</objtemplate>
+	</control>
+
+	<control class="Thunder.RadioButtonContainer">
+		<attr_def>
+			<attr name="BoxNormalIconID" type="string"><default>sub.wnd.radiobutton.box.normal</default></attr>
+			<attr name="DotNormalIconID" type="string"><default>sub.wnd.radiobutton.dot.normal</default></attr>
+			<attr name="DotDisableIconID" type="string"><default>sub.wnd.radiobutton.dot.disable</default></attr>
+			<attr name="BoxDisableIconID" type="string"><default>sub.wnd.radiobutton.box.disable</default></attr>
+			<attr name="BoxHoverIconID" type="string"><default>sub.wnd.radiobutton.box.hover</default></attr>
+			<attr name="SelectedButtonID" type="string"><default></default></attr>
+		</attr_def>
+		<method_def>
+			<AddRadioButton file="RadioButton.xml.lua" func="AddRadioButton" />
+			<AddCustomRadioButton file="RadioButton.xml.lua" func="AddCustomRadioButton" />
+			<GetRadioButton file="RadioButton.xml.lua" func="GetRadioButton" />
+			<SetSelectByID file="RadioButton.xml.lua" func="SetSelectByID" />
+			<SetSelectByIndex file="RadioButton.xml.lua" func="SetSelectByIndex" />
+			<GetSelectedButtonID file="RadioButton.xml.lua" func="GetSelectedButtonID" />
+		</method_def>
+		<event_def>
+			<OnButtonSelectedChanged/>
+		</event_def>
+		<objtemplate>
+			<children>
+			</children>
+			<eventlist>
+				<event name="OnBind" file="RadioButton.xml.lua" func="Container_OnBind" />
+				
+				<event name="OnVisibleChange" file="RadioButton.xml.lua" func="Container_OnVisibleChange" />
+			</eventlist>
+		</objtemplate>
+	</control>
+</xlue>

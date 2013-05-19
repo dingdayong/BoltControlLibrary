@@ -1,0 +1,20 @@
+<XLUE>
+	<resource>		
+		<!-- radiobutton鼠标事件纹理 -->
+		<imagelist id="imagelist.sub.wnd.radiobutton" vertical="0" splitter="1" varyblock="1" image="radiobutton\public.sub.wnd.radiobutton.png"/>
+		<bitmap id="sub.wnd.radiobutton.box.normal" imagelist="imagelist.sub.wnd.radiobutton" index="2" />
+		<bitmap id="sub.wnd.radiobutton.dot.normal" imagelist="imagelist.sub.wnd.radiobutton" index="1" />
+		<bitmap id="sub.wnd.radiobutton.dot.disable" imagelist="imagelist.sub.wnd.radiobutton" index="1" />
+		<bitmap id="sub.wnd.radiobutton.box.disable" imagelist="imagelist.sub.wnd.radiobutton" index="4" />
+		<bitmap id="sub.wnd.radiobutton.box.hover" imagelist="imagelist.sub.wnd.radiobutton" index="3" />
+		
+		<!-- radiobutton曲线 -->
+		<curve id="radiobutton.show" type="bspline">
+			<controlpoint  tp="0.000000" sp="0.000000"/>
+			<controlpoint  tp="0.516484" sp="0.176656"/>
+			<controlpoint  tp="0.744505" sp="1.343849"/>
+			<controlpoint  tp="0.936813" sp="1.318612"/>
+			<controlpoint  tp="0.997253" sp="1.000000"/>
+		</curve>
+	</resource>
+</XLUE>

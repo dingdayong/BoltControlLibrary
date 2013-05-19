@@ -1,0 +1,7 @@
+﻿<XLUE>
+	<resource>			
+  	<imagelist id="imagelist.toolbar" vertical="0" splitter="1" varyblock="1" image="bitmap\backforward.png"/>
+		<bitmap id="imagelist.toolbar.back" imagelist="imagelist.toolbar" index="1" />
+		<bitmap id="imagelist.toolbar.forward" imagelist="imagelist.toolbar" index="2" />
+	</resource>
+</XLUE>

@@ -1,0 +1,137 @@
+<xlue>
+	<animationtemplate id="checkbox.showani" class="PosChangeAnimation">
+		<attr>
+			<curve>checkbox.show</curve>
+			<totaltime>300</totaltime>
+			<loop>false</loop>
+		</attr>
+	</animationtemplate>
+	
+    <control class="Thunder.CheckBox">
+        <attr_def>
+            <attr name="TickMaxIconID" type="string"><default>bitmap.tick.max</default></attr>
+            <attr name="TickNormalIconID" type="string"><default>bitmap.tick.normal</default></attr>
+            <attr name="TickDisableIconID" type="string"><default>bitmap.tick.disable</default></attr>
+            <attr name="BoxNormalIconID" type="string"><default>bitmap.box.normal</default></attr>
+			<attr name="BoxDownIconID" type="string"><default>bitmap.box.normal</default></attr>
+            <attr name="BoxDisableIconID" type="string"><default>bitmap.box.disable</default></attr>
+            <attr name="BoxHoverIconID" type="string"><default>bitmap.box.hover</default></attr>
+			<attr name="TextColor" type="string"><default>system.black</default></attr>
+			<attr name="DisableTextColor" type="string"><default>system.gray</default></attr>
+
+			<attr name="TextFont" type="string"><default>default.font</default></attr>
+            <attr name="Check" type="bool">
+                <default>false</default>
+            </attr>
+            <attr name="Text" type="string"/>
+			<attr name="ShowFocusRect" type="bool" >
+				<default>true</default>
+            </attr>
+			<attr name="Wordellipsis" type="int" >
+				<default>0</default>
+			</attr>
+			<attr name="TabID" type="int"/>
+			<attr name="Animationed" type="bool" >
+				<default>true</default>
+			</attr>
+        </attr_def>
+        <method_def>
+            <SetCheck file="CheckBox.xml.lua" func="SetCheck" />
+            <GetCheck file="CheckBox.xml.lua" func="GetCheck" />
+			<SetText file="CheckBox.xml.lua" func="SetText" />
+			<GetText file="CheckBox.xml.lua" func="GetText" />
+            <AddTip file="CheckBox.xml.lua" func="AddTip"/>
+            <RemoveTip file="CheckBox.xml.lua" func="RemoveTip"/>
+			<SetTickImage file="CheckBox.xml.lua" func="SetTickImage" />
+        </method_def>
+        <event_def>
+			<OnMouseEvent>
+				<param>
+					<string/>
+					<int/>
+					<int/>
+					<int/>
+				</param>
+			</OnMouseEvent>
+            <OnCheck>
+                <param>
+                    <bool/>
+                    <bool/>
+                </param>
+                <return>
+                </return>
+            </OnCheck>
+			<OnCheckBoxLButtonDown>
+				<return>
+					<bool />
+                </return>
+			</OnCheckBoxLButtonDown>
+			<OnBeforeClick>
+				<return>
+					<bool />
+                </return>
+			</OnBeforeClick>
+        </event_def>
+        <objtemplate>
+            <children>
+                <obj id="boximage" class="ImageObject">
+                    <attr>
+                        <left>-2</left>
+                        <top>(father.height - 16)/2</top>
+                        <width>19</width>
+                        <height>19</height>
+                    </attr>
+                    <children>
+                        <obj id="tickimage" class="ImageObject">
+                            <attr>
+                                <left>0</left>
+                                <top>0</top>
+                                <width>19</width>
+                                <height>19</height>
+								<drawmode>1</drawmode>
+                            </attr>
+                        </obj>
+                    </children>
+                </obj>
+				<obj id="focusrectangle" class="RectangleObject">
+					<attr>
+					    <left>5</left>
+						<width>father.width-5</width>
+						<height>father.height</height>
+						<srcpt>16,1</srcpt>
+						<destpt>width - 1,height - 1</destpt>
+						<pen>pen.dot</pen>
+						<pencolor>system.black</pencolor>
+						<brush>brush.null</brush>
+						<visible>false</visible>
+					</attr>
+				</obj>
+                <obj id="checktext" class="TextObject">
+                    <attr>
+                        <left>20</left>
+                        <top>1</top>
+                        <width>father.width-20</width>
+                        <height>father.height</height>
+                        <textcolor>system.black</textcolor>
+                        <font>default.font</font>
+						<halign>left</halign>
+						<valign>center</valign>
+                    </attr>
+                </obj>
+            </children>
+            <eventlist>
+				<event name="OnInitControl" file="CheckBox.xml.lua" func="OnInitControl" />
+                <event name="OnLButtonDown" file="CheckBox.xml.lua" func="OnLButtonDown" />
+                <event name="OnLButtonUp" file="CheckBox.xml.lua" func="OnLButtonUp" />
+                <event name="OnMouseMove" file="CheckBox.xml.lua" func="OnMouseMove" />
+                <event name="OnMouseLeave" file="CheckBox.xml.lua" func="OnMouseLeave" />
+				<event name="OnMouseWheel" file="CheckBox.xml.lua" func="OnMouseWheel" />
+                <event name="OnKeyUp" file="CheckBox.xml.lua" func="OnChar"/>
+				<event name="OnFocusChange" file="CheckBox.xml.lua" func="OnFocusChange"/>
+				
+				<event name="OnEnableChange" file="CheckBox.xml.lua" func="OnEnableChange" />
+				<event name="OnVisibleChange" file="CheckBox.xml.lua" func="OnVisibleChange" />
+            </eventlist>
+        </objtemplate>
+    </control>
+</xlue>
