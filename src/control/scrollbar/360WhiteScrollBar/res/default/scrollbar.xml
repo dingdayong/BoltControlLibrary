@@ -1,0 +1,38 @@
+<XLUE>
+	<resource>
+
+		
+		<texture id="texture.vsb.thumb.normal" type="FiveInOneV" image="scrollbar\scrollbar.vsb.thumb.png" />
+		<texture id="texture.vsb.thumb.hover" type="FiveInOneV" image="scrollbar\scrollbar.vsb.thumb.png" />
+		<texture id="texture.vsb.thumb.down" type="FiveInOneV" image="scrollbar\scrollbar.vsb.thumb.png" />
+
+		
+		<texture id="texture.vsb.bkg.normal" type="ThreeInOneV" image="scrollbar\scrollbar.vsb.bkg.png"/>
+		<texture id="texture.vsb.bkg.hover" type="ThreeInOneV" image="scrollbar\scrollbar.vsb.bkg.png"/>
+		
+
+		<texture id="texture.hsb.thumb.normal" type="FiveInOneH" image="scrollbar\scrollbar.hsb.thumb.png" />
+		<texture id="texture.hsb.thumb.hover" type="FiveInOneH" image="scrollbar\scrollbar.hsb.thumb.png" />
+		<texture id="texture.hsb.thumb.down" type="FiveInOneH" image="scrollbar\scrollbar.hsb.thumb.png" />
+				
+		
+		<texture id="texture.hsb.bkg.normal" type="ThreeInOneH" image="scrollbar\scrollbar.hsb.bkg.png"/>
+		<texture id="texture.hsb.bkg.hover" type="ThreeInOneH" image="scrollbar\scrollbar.hsb.bkg.png"/>
+		
+		
+		<imagelist id="imagelist.general.button.bkg" vertical="0" splitter="1" varyblock="1" image="scrollbar\general.button.bkg.png"/>
+		<texture id="general.button.normal" type="ThreeInOneH" imagelist="imagelist.general.button.bkg" index="1"/>
+		<texture id="general.button.down" type="ThreeInOneH" imagelist="imagelist.general.button.bkg" index="3"/>
+		<texture id="general.button.hover" type="ThreeInOneH" imagelist="imagelist.general.button.bkg" index="2"/>
+		<texture id="general.button.disable" type="ThreeInOneH" imagelist="imagelist.general.button.bkg" index="4"/>		
+		<texture id="siamese.button.left.normal" type="ThreeInOneH" imagelist="imagelist.general.button.bkg" index="5" />
+		<texture id="siamese.button.left.hover" type="ThreeInOneH" imagelist="imagelist.general.button.bkg" index="6" />
+		<texture id="siamese.button.left.down" type="ThreeInOneH" imagelist="imagelist.general.button.bkg" index="7" />
+		<texture id="siamese.button.left.disable" type="ThreeInOneH" imagelist="imagelist.general.button.bkg" index="8" />
+		<texture id="siamese.button.right.normal" type="ThreeInOneH" imagelist="imagelist.general.button.bkg" index="9" />
+		<texture id="siamese.button.right.hover" type="ThreeInOneH" imagelist="imagelist.general.button.bkg" index="10" />
+		<texture id="siamese.button.right.down" type="ThreeInOneH" imagelist="imagelist.general.button.bkg" index="11" />
+		<texture id="siamese.button.right.disable" type="ThreeInOneH" imagelist="imagelist.general.button.bkg" index="12" />
+	
+	</resource>
+</XLUE>
