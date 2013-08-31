@@ -29,9 +29,9 @@
 					<children>
 						<obj id="edit.content" class="EditObject">
 							<attr>
-								<left>9</left>
+								<left>3</left>
 								<top>5</top>
-								<width>father.width-23-16</width>
+								<width>father.width-12</width>
 								<height>16</height>
 								<valign>center</valign>
 								<autourldetect>0</autourldetect>

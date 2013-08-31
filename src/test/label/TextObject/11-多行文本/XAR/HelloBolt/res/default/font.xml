@@ -1,0 +1,7 @@
+﻿<XLUE>
+<resource>
+  <font id="default.font" height="14" facename="宋体" />
+  <font id="msg.font" height="40" facename="微软雅黑" />
+  <font id="msg.font.bold" height="40" weight="bold" facename="微软雅黑" underline="1"/>
+</resource>
+</XLUE>

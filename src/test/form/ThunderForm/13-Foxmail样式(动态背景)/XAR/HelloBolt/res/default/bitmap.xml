@@ -1,0 +1,6 @@
+﻿<XLUE>
+	<resource>			
+		<texture id="foxmail.bitmap.bkg" type="NineInOne" image="bitmap\bkg.png"/>
+		<texture id="foxmail.bitmap.bkglost" type="NineInOne" image="bitmap\bkglost.png"/>
+	</resource>
+</XLUE>

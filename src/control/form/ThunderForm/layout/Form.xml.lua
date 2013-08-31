@@ -1,13 +1,20 @@
 function SetCaption(self, text)
     local attr = self:GetAttribute()
     attr.caption = text
-	local textObj = self:GetControlObject("mainwnd.title")
-	textObj:SetText(text)
-	if text and text ~= "" then
-	    textObj:SetVisible(true)
-	else
-	    textObj:SetVisible(false)
-	end
+    local textObj = self:GetControlObject("mainwnd.title")
+    textObj:SetText(text)
+    if text and text ~= "" then
+	textObj:SetVisible(true)
+    else
+	textObj:SetVisible(false)
+    end
+end
+
+function SetBkg(self, bkg)
+    local attr = self:GetAttribute()
+    attr.bkg = bkg
+    local bkg = self:GetControlObject("mainwnd.bkg")
+    bkg:SetTextureID (attr.bkg)
 end
 
 function GetCaption(self)

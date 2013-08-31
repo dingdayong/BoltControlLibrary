@@ -1,4 +1,4 @@
-<xlue>
+﻿<xlue>
   <control class="Thunder.Form">
     <attr_def>
       <attr name="bkg" type="string">
@@ -16,6 +16,7 @@
     <method_def>
       <SetText file="Form.xml.lua" func="SetCaption" />
       <GetText file="Form.xml.lua" func="GetCaption" />
+      <SetBkg file="Form.xml.lua" func="SetBkg" />
     </method_def>
     <event_def>
     </event_def>
