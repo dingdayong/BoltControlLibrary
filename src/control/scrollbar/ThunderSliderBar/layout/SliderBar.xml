@@ -1,0 +1,93 @@
+<xlue>
+    <control class="Thunder.SliderBar">
+        <attr_def>
+            <!-- 1是纵向 0是横向 -->
+            <attr name="Type" type="int"/>
+            <attr name="Min" type="int">
+                <default>0</default>
+            </attr>
+            <attr name="Max" type="int">
+                <default>100</default>
+            </attr>
+            <attr name="Pos" type="int">
+                <default>0</default>
+            </attr>
+			<attr name="UnValidLength" type="int">
+				<default>0</default>
+			</attr>
+            <attr name="BkgID" type="string"><default>texture.slider.bar</default></attr>
+            <attr name="BtnWidth" type="int"><default>18</default></attr>
+            <attr name="BtnHeight" type="int"><default>19</default></attr>
+            <attr name="BtnNormalBkgID" type="string"> <default>sliderbar.btn.normal</default></attr>
+            <attr name="BtnHoverBkgID" type="string"> <default>sliderbar.btn.hover</default></attr>
+            <attr name="BtnDownBkgID" type="string"><default>sliderbar.btn.down</default></attr>
+            <attr name="BtnDisableID" type="string"/>
+            <attr name="Enable" type="bool">
+                <default>true</default>
+            </attr>
+        </attr_def>
+        <method_def>
+            <SetRange file="SliderBar.xml.lua" func="SetRange"/>
+            <GetRange file="SliderBar.xml.lua" func="GetRange"/>
+            <SetPos file="SliderBar.xml.lua" func="SetPos"/>
+            <GetPos file="SliderBar.xml.lua" func="GetPos"/>
+			<SetFocus file="SliderBar.xml.lua" func="SetFocus"/>
+            <SetEnable file="SliderBar.xml.lua" func="SetEnable"/>
+        </method_def>
+        <event_def>
+            <OnSliderChange>
+                <param>
+                    <int/>
+                </param>
+            </OnSliderChange>
+			<OnSliderLostFocus/>
+			<OnSliderLButtonDown>
+				<param>
+					<int/>
+					<int/>
+					<int/>
+				</param>
+			</OnSliderLButtonDown>
+        </event_def>
+        <objtemplate>
+            <children>
+                <obj id="sliderbar.bkg" class="TextureObject">
+                    <attr>
+                        <left>0</left>
+                        <top>0</top>
+                        <width>father.width</width>
+                        <height>father.height</height>
+                    </attr>
+                    <children>
+                        <obj id="sliderbar.btn" class="Thunder.SliderBarButton">
+                            <attr>
+                                <left>0</left>
+                                <top>0</top>
+                                <width>15</width>
+                                <height>father.height</height>
+                                <NormalBkgID></NormalBkgID>
+                                <DownBkgID></DownBkgID>
+                                <DisableBkgID></DisableBkgID>
+                                <HoverBkgID></HoverBkgID>
+                                <!--Enable>true</Enable-->
+								<ShowFocusRect>false</ShowFocusRect>
+                            </attr>
+							<eventlist>
+								<event name="OnFocusChange" file="SliderBar.xml.lua" func="Btn__OnFocusChange"/>
+							</eventlist>
+                        </obj>
+                    </children>
+                    <eventlist>
+                        <event name="OnLButtonDown" file="SliderBar.xml.lua" func="OnLButtonDown"/>
+						<event name="OnFocusChange" file="SliderBar.xml.lua" func="Bkg__OnFocusChange"/>
+                    </eventlist>
+                </obj>
+            </children>
+            <eventlist>
+                <event name="OnInitControl" file="SliderBar.xml.lua" func="OnInitControl"/>
+                <event name="OnPosChange" file="SliderBar.xml.lua" func="OnPosChange"/>
+            </eventlist>
+        </objtemplate>
+    </control>
+    
+</xlue>
