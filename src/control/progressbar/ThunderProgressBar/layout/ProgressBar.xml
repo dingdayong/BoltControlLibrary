@@ -1,0 +1,185 @@
+<xlue>
+	<control class="Thunder.ProgressBar">
+		<attr_def>
+
+			<attr name="LowBound" type="int">
+				<default>0</default>
+			</attr>
+			<attr name="HighBound" type="int">
+				<default>100</default>
+			</attr>
+			<attr name="Progress" type="int">
+				<default>0</default>
+			</attr>
+			<!-- 每次调用Step后Progress的增长值-->
+			<attr name="StepNum" type="int">
+				<default>1</default>
+			</attr>
+			
+			<attr name="ShowText" type="bool">
+				<default>false</default>
+			</attr>
+			<attr name="Font" type="string" />
+			<attr name="ShowTextStyle" type="int"><default>0</default></attr> <!--显示文字的样式：百分比 ，实际数据比例还是待扩展？-->
+			<attr name="Floor" type="int">	<!--进度小数点后几位-->
+				<default>1</default>
+			</attr>
+			<attr name="TextTop" type="int">
+				<default>0</default>
+			</attr>
+			
+			<attr name="EmptyID" type="string">
+				<default>progress.empty</default>
+			</attr>
+			<attr name="FullID" type="string">
+				<default>progress.full</default>
+			</attr>
+			<attr name="ShowAni" type="bool">
+				<default>false</default>
+			</attr>
+			<attr name="DisableEmptyID" type="string" />
+			<attr name="DisableFullID" type="string" />
+					<attr name="FullProgress" type="bool">	<!--初始满进度-->
+				<default>false</default>
+			</attr>
+			<attr name="FullProcessBkgId" type="string" /> <!--初始满进度的背景-->
+
+		</attr_def>
+
+		<method_def>
+			<SetProgress file="ProgressBar.xml.lua" func="SetProgress" />
+			<GetProgress file="ProgressBar.xml.lua" func="GetProgress" />
+			<SetBound file="ProgressBar.xml.lua" func="SetBound" />
+			<GetBound file="ProgressBar.xml.lua" func="GetBound" />
+			<SetStep file="ProgressBar.xml.lua" func="SetStep" />
+			<GetStep file="ProgressBar.xml.lua" func="GetStep" />
+			<Step file="ProgressBar.xml.lua" func="Step" />
+			<SetEmptyID file="ProgressBar.xml.lua" func="SetEmptyID" />
+			<GetEmptyID file="ProgressBar.xml.lua" func="GetEmptyID" />
+			<SetFullID file="ProgressBar.xml.lua" func="SetFullID" />
+			<GetFullID file="ProgressBar.xml.lua" func="GetFullID" />
+			<SetDisableEmptyID file="ProgressBar.xml.lua" func="SetDisableEmptyID" />
+			<GetDisableEmptyID file="ProgressBar.xml.lua" func="GetDisableEmptyID" />
+			<SetDisableFullID file="ProgressBar.xml.lua" func="SetDisableFullID" />
+			<GetDisableFullID file="ProgressBar.xml.lua" func="GetDisableFullID" />
+			<UpdateProgress file="ProgressBar.xml.lua" func="UpdateProgress" />
+			<CalcProgressText file="ProgressBar.xml.lua" func="CalcProgressText" />
+			<SetAlpha file="ProgressBar.xml.lua" func="SetAlpha" />
+			<SetFloor file="ProgressBar.xml.lua" func="SetFloor" />
+			<GetFloor file="ProgressBar.xml.lua" func="GetFloor" />
+		</method_def>
+
+		<objtemplate>
+			<children>
+				<obj id="TextPart" class="LayoutObject">
+					<attr>
+						<left>0</left>
+						<top>0</top>
+						<width>father.width</width>
+						<height>father.height</height>
+						<zorder>200</zorder>
+					</attr>
+					<children>
+						<obj id="ProgressText" class="TextObject">
+							<attr>
+								<left>0</left>
+								<top>0</top>
+								<width>father.width</width>
+								<height>father.height</height>
+								<halign>center</halign>
+								<valign>center</valign>
+								<font>default.font</font>
+							</attr>
+						</obj>
+					</children>
+				</obj>
+				<obj id="LightBkg" class="LayoutObject">
+					<attr>
+						<left>0</left>
+						<top>-2</top>
+						<width>father.width</width>
+						<height>father.height</height>
+						<zorder>100</zorder>
+						<limitchild>1</limitchild>
+					</attr>
+					<children>
+						<obj id = "LightBkg.Ani.Light" class="ImageObject">	
+							<attr>
+								<left>0</left>
+								<top>0</top>E
+								<width>father.width</width>
+								<height>father.height</height>
+								<image>progress.light.bkg</image>
+								<visible>0</visible>
+								<drawmode>1</drawmode>
+							</attr>
+						</obj>
+					</children>
+				</obj>
+				<obj id="FullPart" class="LayoutObject">
+					<attr>
+						<left>0</left>
+						<top>0</top>
+						<width>father.width</width>
+						<height>father.height</height>
+						<limitchild>1</limitchild>
+					</attr>
+					<children>
+						<obj id="FullBkn" class="TextureObject">
+							<attr>
+								<left>0</left>
+								<top>0</top>
+								<width>father.width</width>
+								<height>father.height</height>
+							</attr>
+						</obj>
+					</children>
+				</obj>
+				<obj id="EmptyPart" class="LayoutObject">
+					<attr>
+						<left>0</left>
+						<top>0</top>
+						<width>father.width</width>
+						<height>father.height</height>
+						<limitchild>1</limitchild>
+					</attr>
+					<children>
+						<obj id="EmptyBkn" class="TextureObject">
+							<attr>
+								<left>0</left>
+								<top>0</top>
+								<width>father.width</width>
+								<height>father.height</height>
+							</attr>
+						</obj>
+					</children>
+				</obj>
+				<obj id="FullProcessBkg" class="ImageObject">
+					<attr>
+						<width>father.width</width>
+						<height>father.height</height>
+					</attr>
+				</obj>
+			</children>
+			<eventlist>
+				<event name="OnBind" file="ProgressBar.xml.lua" func="OnBind" />
+				<event name="OnPosChange" file="ProgressBar.xml.lua" func="OnPosChange" />
+				<event name="OnInitControl" file="ProgressBar.xml.lua" func="Progress_OnInitControl" />
+				
+				<event name="OnEnableChange" file="ProgressBar.xml.lua" func="OnEnableChange" />
+				<event name="OnVisibleChange" file="ProgressBar.xml.lua" func="OnVisibleChange" />
+			</eventlist>
+		</objtemplate>
+	</control>
+	
+	
+	<animationtemplate id="Progress.Light.Animation" class="PosChangeAnimation">
+		<attr>
+			<totaltime>6000</totaltime>
+			<curve>progress.light</curve>
+			<loop>true</loop>
+		</attr>
+		<eventlist>
+		</eventlist>
+	</animationtemplate>	
+</xlue>

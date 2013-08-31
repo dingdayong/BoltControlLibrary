@@ -1,0 +1,16 @@
+<XLUE>
+<resource>
+	<curve id="progress.light" type="bspline">
+		<controlpoint  tp="0.000000" sp="0.000000"/>
+		<controlpoint  tp="0.219780" sp="1.000000"/>
+		<controlpoint  tp="0.782967" sp="1.003155"/>
+		<controlpoint  tp="0.997253" sp="0.012618"/>
+	</curve>
+	
+	<bitmap id="progress.light.bkg" path="progress\progress.light.png"/>
+	<imagelist id="progress.bkg" vertical="0" splitter="1" varyblock="1" image="progress\progress.png"/>
+	<texture id="progress.empty" type="ThreeInOneH" imagelist="progress.bkg" index="2"/>
+	<texture id="progress.full" type="ThreeInOneH" imagelist="progress.bkg" index="1"/>
+	<bitmap id="progress.fullbkg" path="progress\progress.fullbkg.png"/>
+</resource>
+</XLUE>
